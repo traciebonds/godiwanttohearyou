@@ -1,0 +1,1669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracie Bonds | Author · Speaker · Spiritual Strategy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --linen: #F2EEE8;
+            --cream: #F8F5F0;
+            --warm-white: #FDFBF8;
+            --sand: #E4DDD4;
+            --driftwood: #B8ADA4;
+            --iron: #2A2E30;
+            --iron-light: #484E52;
+            --seaglass: #7B9198;
+            --seaglass-light: #A4B8BC;
+            --navy: #1B2D4F;
+            --fuchsia: #E8187A;
+            --gold: #B8A87A;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; overflow-x: hidden; }
+        body {
+            font-family: 'Jost', sans-serif;
+            background: var(--warm-white);
+            color: var(--iron);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* ── NAV ── */
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 100;
+            background: rgba(253,251,248,0.97);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--sand);
+            padding: 0 60px;
+            height: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-logo {
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.1;
+        }
+        .nav-logo-name {
+            font-family: 'Jost', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--fuchsia);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+        .nav-logo-tag {
+            font-size: 0.6rem;
+            letter-spacing: 5.5px;
+            text-transform: uppercase;
+            color: var(--seaglass);
+            font-weight: 500;
+            display: block;
+            width: 100%;
+            text-align: justify;
+            text-align-last: justify;
+        }
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+            align-items: center;
+        }
+        .nav-links a {
+            color: var(--iron-light);
+            text-decoration: none;
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--seaglass); }
+        .nav-cta {
+            background: var(--fuchsia) !important;
+            color: white !important;
+            padding: 10px 22px;
+            letter-spacing: 1.5px !important;
+            transition: background 0.2s !important;
+        }
+        .nav-cta:hover { background: var(--navy) !important; }
+
+        /* ── 3D BOOK COVER ── */
+        .book-cover-3d {
+            width: 320px;
+            background: var(--cream);
+            border-radius: 0 6px 6px 0;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.18), -10px 0 30px rgba(0,0,0,0.08);
+            padding: 36px 36px 32px;
+            position: relative;
+            text-align: left;
+            margin-bottom: 32px;
+        }
+        .cover-spine {
+            position: absolute;
+            left: 0; top: 0; bottom: 0;
+            width: 10px;
+            background: linear-gradient(to right, rgba(0,0,0,0.15), rgba(0,0,0,0.05), transparent);
+        }
+        .cover-series {
+            font-family: 'Jost', sans-serif;
+            font-size: 11px;
+            letter-spacing: 3px;
+            color: #888;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        .cover-god { font-family: 'Cormorant Garamond', serif; font-size: 60px; font-weight: 700; color: var(--navy); line-height: 0.9; }
+        .cover-iwant { font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 700; color: var(--navy); line-height: 1.0; margin-top: 6px; }
+        .cover-tohear { font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 700; color: var(--navy); line-height: 1.0; margin-top: 6px; }
+        .cover-you { font-family: 'Cormorant Garamond', serif; font-size: 60px; font-weight: 700; color: var(--navy); line-height: 1.0; margin-top: 6px; margin-bottom: 20px; }
+        .cover-subtitle { font-family: 'Cormorant Garamond', serif; font-size: 12px; font-style: italic; color: #888; line-height: 1.6; margin-bottom: 16px; }
+        .cover-subtitle strong { font-style: normal; font-weight: 700; }
+        .cover-author-name { font-family: 'Jost', sans-serif; font-size: 15px; font-weight: 700; color: var(--fuchsia); letter-spacing: 2px; text-transform: uppercase; }
+
+        /* ── HERO ── */
+        .hero {
+            min-height: 100vh;
+            background: #FFFFFF;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 120px 60px 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: 
+                radial-gradient(ellipse at 20% 50%, rgba(123,145,152,0.08) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 20%, rgba(232,24,122,0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        .hero-eyebrow {
+            font-size: 0.65rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: var(--seaglass);
+            font-weight: 500;
+            margin-bottom: 32px;
+            position: relative;
+            z-index: 1;
+        }
+        .hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 5rem;
+            font-weight: 700;
+            line-height: 1.0;
+            color: var(--navy);
+            margin-bottom: 0;
+            position: relative;
+            z-index: 1;
+            text-wrap: balance;
+            max-width: 800px;
+            letter-spacing: 2px;
+        }
+        .hero h1 em {
+            font-style: italic;
+            color: var(--fuchsia);
+            font-weight: 300;
+            display: block;
+            font-size: 4.2rem;
+            letter-spacing: 1px;
+        }
+        .hero-divider {
+            width: 80px;
+            height: 2px;
+            background: var(--fuchsia);
+            margin: 36px auto;
+            position: relative;
+            z-index: 1;
+        }
+        .hero-tagline {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-style: italic;
+            font-weight: 300;
+            color: var(--iron-light);
+            max-width: 680px;
+            line-height: 1.7;
+            margin-bottom: 48px;
+            position: relative;
+            z-index: 1;
+            text-wrap: balance;
+        }
+        .hero-tagline strong {
+            color: var(--navy);
+            font-style: normal;
+            font-weight: 600;
+        }
+        .hero-btns {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+        }
+        .hero-stats {
+            display: flex;
+            gap: 60px;
+            margin-top: 64px;
+            padding-top: 40px;
+            border-top: 1px solid var(--sand);
+            position: relative;
+            z-index: 1;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .hero-stat { text-align: center; }
+        .hero-stat-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--fuchsia);
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+        .hero-stat-label {
+            font-size: 0.62rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--driftwood);
+            font-weight: 500;
+        }
+
+        /* ── FEELING BAR ── */
+        .feeling-bar {
+            background: var(--iron);
+            padding: 28px 80px;
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+            flex-wrap: wrap;
+        }
+        .feeling-item { text-align: center; }
+        .feeling-item span {
+            display: block;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            font-style: italic;
+            color: var(--cream);
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+        .feeling-item small {
+            font-size: 0.6rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--driftwood);
+            font-weight: 400;
+        }
+        .feeling-divider {
+            width: 1px;
+            height: 40px;
+            background: rgba(196,181,165,0.3);
+        }
+
+        /* ── SIGNAL BAR ── */
+        .signal-bar {
+            background: var(--navy);
+            padding: 20px 60px;
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .signal-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .signal-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--fuchsia);
+            flex-shrink: 0;
+        }
+        .signal-text {
+            font-size: 0.68rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.7);
+            font-weight: 500;
+        }
+        .signal-text strong { color: white; font-weight: 600; }
+
+        /* ── SECTION SHARED ── */
+        .section-eyebrow {
+            font-size: 0.62rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--fuchsia);
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.8rem;
+            font-weight: 300;
+            color: var(--navy);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+        .section-title em { font-style: italic; color: var(--seaglass); }
+        .section-title strong { font-weight: 700; color: var(--navy); }
+
+        /* ── ABOUT ── */
+        .about {
+            background: var(--warm-white);
+            padding: 100px 80px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .about-left p {
+            font-size: 0.95rem;
+            color: var(--iron-light);
+            line-height: 1.95;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+        .about-left p strong { color: var(--navy); font-weight: 600; }
+        .about-pull {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6rem;
+            font-style: italic;
+            font-weight: 300;
+            color: var(--navy);
+            line-height: 1.5;
+            border-left: 3px solid var(--fuchsia);
+            padding-left: 24px;
+            margin: 32px 0;
+            text-wrap: balance;
+        }
+        .about-right {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        .about-stat {
+            background: var(--linen);
+            border: 1px solid var(--sand);
+            padding: 28px 32px;
+        }
+        .about-stat-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--fuchsia);
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+        .about-stat-label {
+            font-size: 0.72rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--iron-light);
+            font-weight: 500;
+        }
+
+        /* ── PRAYER CALL ── */
+        .prayer-call {
+            background: var(--seaglass);
+            padding: 100px 80px;
+            text-align: center;
+        }
+        .prayer-call-inner { max-width: 760px; margin: 0 auto; }
+        .prayer-call h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 16px;
+            line-height: 1.2;
+            text-wrap: balance;
+        }
+        .prayer-call-sub {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 32px;
+            line-height: 1.6;
+            text-wrap: balance;
+        }
+        .prayer-call p {
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.8);
+            font-weight: 300;
+            line-height: 1.9;
+            margin-bottom: 16px;
+            text-wrap: balance;
+        }
+        .prayer-details-bar {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            flex-wrap: wrap;
+            margin: 36px 0;
+            padding: 28px 0;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+        .prayer-detail-item { text-align: center; }
+        .prayer-detail-label {
+            font-size: 0.6rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.55);
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        .prayer-detail-value {
+            font-size: 0.88rem;
+            color: white;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+        .btn-prayer {
+            display: inline-block;
+            background: white;
+            color: var(--seaglass);
+            padding: 16px 40px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.2s;
+            margin-top: 8px;
+        }
+        .btn-prayer:hover { background: var(--navy); color: white; }
+        .prayer-integrity {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.55);
+            font-style: italic;
+            margin-top: 16px;
+            line-height: 1.7;
+        }
+
+        /* ── BOOK ── */
+        .book-section {
+            background: var(--linen);
+            padding: 100px 80px;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 80px;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .book-cover-render {
+            width: 280px;
+            background: var(--cream);
+            border-radius: 0 4px 4px 0;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.18), -8px 0 20px rgba(0,0,0,0.08);
+            padding: 36px 32px 32px;
+            position: relative;
+            flex-shrink: 0;
+        }
+        .book-spine {
+            position: absolute;
+            left: 0; top: 0; bottom: 0;
+            width: 8px;
+            background: linear-gradient(to right, rgba(0,0,0,0.12), rgba(0,0,0,0.04), transparent);
+        }
+        .bcr-series {
+            font-family: 'Jost', sans-serif;
+            font-size: 10px;
+            letter-spacing: 3px;
+            color: #888;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        .bcr-god { font-family: 'Cormorant Garamond', serif; font-size: 58px; font-weight: 700; color: var(--navy); line-height: 0.9; }
+        .bcr-iwant { font-family: 'Cormorant Garamond', serif; font-size: 40px; font-weight: 700; color: var(--navy); line-height: 1.0; margin-top: 4px; }
+        .bcr-tohear { font-family: 'Cormorant Garamond', serif; font-size: 40px; font-weight: 700; color: var(--navy); line-height: 1.0; margin-top: 4px; }
+        .bcr-you { font-family: 'Cormorant Garamond', serif; font-size: 58px; font-weight: 700; color: var(--navy); line-height: 1.0; margin-top: 4px; margin-bottom: 20px; }
+        .bcr-subtitle { font-family: 'Cormorant Garamond', serif; font-size: 11px; font-style: italic; color: #888; line-height: 1.5; margin-bottom: 14px; }
+        .bcr-subtitle strong { font-style: normal; font-weight: 700; }
+        .bcr-author { font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 700; color: var(--fuchsia); letter-spacing: 2px; text-transform: uppercase; }
+        .book-text p {
+            font-size: 0.95rem;
+            color: var(--iron-light);
+            line-height: 1.9;
+            font-weight: 300;
+            margin-bottom: 16px;
+        }
+        .book-text blockquote {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: var(--navy);
+            border-left: 3px solid var(--fuchsia);
+            padding-left: 20px;
+            margin: 24px 0;
+            line-height: 1.6;
+        }
+        .book-btns { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 28px; }
+
+        /* ── THE COUNCIL ── */
+        .council-section {
+            background: var(--cream);
+            padding: 100px 80px;
+            border-top: 1px solid var(--sand);
+            border-bottom: 1px solid var(--sand);
+        }
+        .council-inner { max-width: 1000px; margin: 0 auto; }
+        .council-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .council-header p {
+            font-size: 1rem;
+            color: var(--iron-light);
+            font-weight: 300;
+            line-height: 1.85;
+            max-width: 640px;
+            margin: 0 auto;
+            text-wrap: balance;
+        }
+        .council-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+        }
+        .council-card {
+            background: white;
+            border: 1px solid var(--sand);
+            padding: 48px 44px;
+            position: relative;
+        }
+        .council-card.featured {
+            background: var(--navy);
+            border-color: var(--navy);
+        }
+        .council-badge {
+            position: absolute;
+            top: -14px;
+            left: 44px;
+            background: var(--fuchsia);
+            color: white;
+            font-size: 0.6rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 5px 14px;
+        }
+        .council-tier {
+            font-size: 0.62rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--seaglass);
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .council-card.featured .council-tier { color: var(--seaglass-light); }
+        .council-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 8px;
+            line-height: 1.1;
+        }
+        .council-card.featured .council-name { color: white; }
+        .council-price {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: var(--fuchsia);
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+        .council-price-note {
+            font-size: 0.72rem;
+            color: var(--driftwood);
+            font-weight: 300;
+            margin-bottom: 28px;
+            letter-spacing: 0.5px;
+        }
+        .council-card.featured .council-price-note { color: rgba(255,255,255,0.45); }
+        .council-divider {
+            height: 1px;
+            background: var(--sand);
+            margin-bottom: 24px;
+        }
+        .council-card.featured .council-divider { background: rgba(255,255,255,0.12); }
+        .council-features {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 32px;
+        }
+        .council-feature {
+            font-size: 0.88rem;
+            color: var(--iron-light);
+            font-weight: 300;
+            line-height: 1.6;
+            padding-left: 20px;
+            position: relative;
+        }
+        .council-feature::before {
+            content: '—';
+            position: absolute;
+            left: 0;
+            color: var(--fuchsia);
+            font-weight: 400;
+        }
+        .council-card.featured .council-feature { color: rgba(255,255,255,0.75); }
+        .council-card.featured .council-feature::before { color: var(--fuchsia); }
+        .btn-council {
+            display: block;
+            background: var(--navy);
+            color: white;
+            padding: 16px;
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-decoration: none;
+            text-align: center;
+            transition: background 0.2s;
+        }
+        .btn-council:hover { background: var(--fuchsia); }
+        .btn-council-outline {
+            display: block;
+            border: 1px solid var(--fuchsia);
+            color: var(--fuchsia);
+            padding: 16px;
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.2s;
+        }
+        .btn-council-outline:hover { background: var(--fuchsia); color: white; }
+        .council-truth {
+            background: var(--linen);
+            border-left: 4px solid var(--fuchsia);
+            padding: 32px 36px;
+            margin-top: 48px;
+        }
+        .council-truth p {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.15rem;
+            font-style: italic;
+            color: var(--navy);
+            line-height: 1.8;
+            font-weight: 400;
+        }
+        .council-truth-attr {
+            font-size: 0.65rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--driftwood);
+            margin-top: 12px;
+            font-weight: 500;
+        }
+
+        /* ── SPEAKING ── */
+        .speaking-section {
+            background: var(--navy);
+            padding: 100px 80px;
+            text-align: center;
+        }
+        .speaking-inner { max-width: 800px; margin: 0 auto; }
+        .speaking-section .section-eyebrow { color: var(--seaglass-light); }
+        .speaking-section .section-title { color: white; }
+        .speaking-section .section-title em { color: var(--seaglass-light); }
+        .speaking-topics {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin: 40px 0;
+            text-align: left;
+        }
+        .speaking-topic {
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 24px 28px;
+        }
+        .speaking-topic-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 6px;
+        }
+        .speaking-topic-sub {
+            font-size: 0.78rem;
+            color: rgba(255,255,255,0.5);
+            font-weight: 300;
+            line-height: 1.6;
+        }
+        .speaking-audiences {
+            font-size: 0.82rem;
+            color: rgba(255,255,255,0.6);
+            font-weight: 300;
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+        .speaking-audiences strong { color: rgba(255,255,255,0.85); font-weight: 500; }
+
+        /* ── SPEAKING FORM ── */
+        .speaking-form {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 48px;
+            text-align: left;
+            margin-top: 48px;
+        }
+        .speaking-form h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 8px;
+        }
+        .speaking-form p {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.55);
+            font-weight: 300;
+            margin-bottom: 28px;
+            line-height: 1.7;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+        .form-field {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-bottom: 16px;
+        }
+        .form-field label {
+            font-size: 0.62rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.5);
+            font-weight: 600;
+        }
+        .form-field input,
+        .form-field select,
+        .form-field textarea {
+            background: rgba(255,255,255,0.07);
+            border: 1px solid rgba(255,255,255,0.15);
+            color: white;
+            padding: 13px 16px;
+            font-family: 'Jost', sans-serif;
+            font-size: 0.88rem;
+            outline: none;
+            transition: border-color 0.2s;
+            width: 100%;
+        }
+        .form-field input::placeholder,
+        .form-field textarea::placeholder { color: rgba(255,255,255,0.25); }
+        .form-field input:focus,
+        .form-field select:focus,
+        .form-field textarea:focus { border-color: var(--fuchsia); }
+        .form-field select { appearance: none; cursor: pointer; }
+        .form-field select option { background: var(--navy); color: white; }
+        .form-field textarea { resize: vertical; min-height: 100px; }
+        .btn-submit {
+            background: var(--fuchsia);
+            color: white;
+            border: none;
+            padding: 16px 40px;
+            font-family: 'Jost', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background 0.2s;
+            width: 100%;
+            margin-top: 8px;
+        }
+        .btn-submit:hover { background: white; color: var(--fuchsia); }
+
+        /* ── BOOKS CATALOG ── */
+        .books-section {
+            background: var(--warm-white);
+            padding: 100px 80px;
+        }
+        .books-inner { max-width: 1000px; margin: 0 auto; }
+        .books-header { text-align: center; margin-bottom: 60px; }
+        .catalog-series-label {
+            font-size: 0.62rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--seaglass);
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 48px;
+        }
+        .catalog-book {
+            background: var(--linen);
+            border: 1px solid var(--sand);
+            padding: 28px 24px;
+            position: relative;
+        }
+        .catalog-book.active { border-color: var(--fuchsia); }
+        .catalog-book-num {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.4rem;
+            font-weight: 300;
+            color: var(--sand);
+            line-height: 1;
+            margin-bottom: 12px;
+        }
+        .catalog-book.active .catalog-book-num { color: var(--fuchsia); opacity: 0.4; }
+        .catalog-book-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 6px;
+            line-height: 1.3;
+        }
+        .catalog-book-sub {
+            font-size: 0.75rem;
+            color: var(--driftwood);
+            font-weight: 300;
+            line-height: 1.5;
+            margin-bottom: 14px;
+        }
+        .catalog-book-status {
+            font-size: 0.6rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--driftwood);
+            font-weight: 600;
+        }
+        .catalog-book-status.available { color: var(--fuchsia); }
+
+        /* ── FOOTER ── */
+        footer {
+            background: var(--iron);
+            padding: 60px 80px 32px;
+        }
+        .footer-tagline {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            font-style: italic;
+            font-weight: 600;
+            color: rgba(255,255,255,0.85);
+            text-align: center;
+            margin-bottom: 48px;
+            letter-spacing: 0.5px;
+        }
+        .footer-top {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 48px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            margin-bottom: 28px;
+        }
+        .footer-brand-name {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--fuchsia);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+        .footer-brand-tag {
+            font-size: 0.65rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--seaglass);
+            display: block;
+            margin-bottom: 16px;
+            font-weight: 500;
+        }
+        .footer-brand p {
+            font-size: 0.82rem;
+            color: rgba(255,255,255,0.4);
+            font-weight: 300;
+            line-height: 1.8;
+        }
+        .footer-col h4 {
+            font-size: 0.6rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: white;
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+        .footer-col a {
+            display: block;
+            color: rgba(255,255,255,0.55);
+            text-decoration: none;
+            font-size: 0.82rem;
+            font-weight: 300;
+            margin-bottom: 10px;
+            transition: color 0.2s;
+        }
+        .footer-col a:hover { color: white; }
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .footer-bottom p {
+            font-size: 0.7rem;
+            color: rgba(255,255,255,0.25);
+            font-weight: 300;
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 900px) {
+            nav { padding: 0 20px; }
+            .nav-links { display: none; }
+            .hero { grid-template-columns: 1fr; }
+            .hero-right { min-height: 300px; }
+            .hero-left { padding: 60px 24px; }
+            .about { grid-template-columns: 1fr; padding: 60px 24px; gap: 40px; }
+            .book-section { grid-template-columns: 1fr; padding: 60px 24px; gap: 40px; }
+            .council-grid { grid-template-columns: 1fr; }
+            .speaking-topics { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+            .catalog-grid { grid-template-columns: 1fr 1fr; }
+            .footer-top { grid-template-columns: 1fr; gap: 32px; }
+            .prayer-call { padding: 60px 24px; }
+            .speaking-section { padding: 60px 24px; }
+            .speaking-form { padding: 28px 24px; }
+            .council-section { padding: 60px 24px; }
+            .books-section { padding: 60px 24px; }
+            footer { padding: 48px 24px 28px; }
+            .signal-bar { padding: 16px 24px; gap: 24px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- PRE-ORDER BAR -->
+    <div class="preorder-bar">
+        <a href="https://amzn.to/3Q6MLA8" target="_blank">
+            Help us become an Amazon Bestseller! &nbsp;<span class="preorder-cta">Pre-Order Now — $2.99 →</span>
+        </a>
+    </div>
+
+    <style>
+        .preorder-bar {
+            background: var(--fuchsia);
+            padding: 8px 20px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 200;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .preorder-bar a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.65rem;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+        }
+        .preorder-bar strong { font-weight: 700; }
+        .preorder-cta {
+            font-weight: 700;
+            text-decoration: underline;
+            letter-spacing: 1px;
+        }
+        nav { top: 34px !important; }
+        .hero { padding-top: 144px !important; }
+    </style>
+
+    <!-- NAV -->
+    <nav>
+        <a href="#" class="nav-logo">
+            <span class="nav-logo-name">Tracie Bonds</span>
+            <span class="nav-logo-tag">Pray. Listen. Obey.</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="https://godiwanttohearYou.com">The Book</a></li>
+            <li><a href="#prayer-call">The Daily Prayer Call</a></li>
+            <li><a href="#council">The Council</a></li>
+            <li><a href="#speaking">Speaking</a></li>
+            <li><a href="#" class="nav-cta">Order the Book →</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <!-- 3D BOOK COVER -->
+        <div class="book-cover-3d">
+            <div class="cover-spine"></div>
+            <div class="cover-series">The Radical Faith Series</div>
+            <div class="cover-title-wrap">
+                <div class="cover-god">GOD,</div>
+                <div class="cover-iwant">I WANT</div>
+                <div class="cover-tohear">TO HEAR</div>
+                <div class="cover-you">YOU</div>
+            </div>
+            <div class="cover-subtitle">9 Essential Practices<br>For Hearing <strong>HIS</strong> Voice</div>
+            <div class="cover-author-name">Tracie Bonds</div>
+        </div>
+
+        <p class="hero-tagline">Are you hungry for more of God?</p>
+        <div class="hero-btns" style="margin-bottom:32px;">
+            <a href="https://amzn.to/3Q6MLA8" class="btn-primary" style="background:var(--fuchsia); padding:18px 44px; font-size:0.78rem; width:100%; max-width:380px; text-align:center; color:white; text-decoration:none;">Pre-Order the Book →</a>
+        </div>
+
+        <div style="max-width:600px; text-align:center; position:relative; z-index:1;">
+            <p class="hero-tagline" style="margin-bottom:8px;">Hi, I am Tracie Bonds. I have been helping believers pray, listen, and obey for over 20 years. Through the highest highs and the lowest lows -- my one constant has been my faith in Jesus Christ. That faith is what everything here is built on.</p>
+        </div>
+
+        <div class="hero-stats">
+            <div class="hero-stat">
+                <div class="hero-stat-number">13+</div>
+                <div class="hero-stat-label">Years of The Daily Prayer Call</div>
+            </div>
+            <div class="hero-stat">
+                <div class="hero-stat-number">$12M</div>
+                <div class="hero-stat-label">Earned Following God's Voice</div>
+            </div>
+            <div class="hero-stat">
+                <div class="hero-stat-number">100K+</div>
+                <div class="hero-stat-label">Lives Impacted</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOK COPY -->
+    <section style="background:var(--linen); padding:60px 40px; border-top:1px solid var(--sand); text-align:center;">
+        <div style="max-width:680px; margin:0 auto;">
+            <div class="section-eyebrow">About the Book</div>
+            <p style="font-family:'Cormorant Garamond', serif; font-size:1.3rem; font-style:italic; color:var(--navy); line-height:1.8; margin-bottom:20px; text-wrap:balance;">I wrote this book as an act of obedience. During a season where I lost my income of 17 years, when all I wanted to do was figure out how to rebuild, God said -- stay on the wall and write this book. So I did.</p>
+            <p style="font-size:0.95rem; color:var(--iron-light); font-weight:300; line-height:1.9; margin-bottom:20px; text-wrap:balance;"><em>GOD, I WANT TO HEAR YOU</em> gives every believer nine essential practices for positioning themselves to seek, hear, and obey God -- no matter what season they are in.</p>
+            <p style="font-family:'Cormorant Garamond', serif; font-size:1.1rem; font-style:italic; color:var(--navy); line-height:1.8; margin-bottom:32px;">"Hearing God is not reserved for the spiritually elite. It is the birthright of every believer."</p>
+            <a href="https://amzn.to/3Q6MLA8" class="btn-primary" style="background:var(--fuchsia); display:inline-block; padding:16px 40px; color:white; text-decoration:none;">Pre-Order the Book — $2.99 →</a>
+        </div>
+    </section>
+
+    <!-- COME TO THE WELL -->
+    <section class="well-section">
+        <div class="well-inner">
+            <div class="section-eyebrow" style="color:var(--seaglass);">Free · Available Everywhere</div>
+            <div class="section-title" style="color:var(--navy);">Come to <em>The Well.</em></div>
+            <p class="well-desc">Every weekday for over 13 years, believers have gathered on The Daily Prayer Call to seek God together -- to pray, be encouraged, and grow in their faith. These calls are teaching, prayer, and Spirit-led counsel all in one. Come thirsty. Leave watered.</p>
+            <p class="well-desc">Listen to teachings and Prayer Call replays below or find The Pray. Listen. Obey. Podcast with Tracie Bonds on Spotify and Apple Podcasts.</p>
+
+            <!-- PLATFORM LINKS -->
+            <div class="well-platforms">
+                <a href="https://podcasters.spotify.com" target="_blank" class="well-platform">
+                    <span class="well-platform-icon">🎵</span>
+                    <span>Spotify</span>
+                </a>
+                <a href="#" target="_blank" class="well-platform">
+                    <span class="well-platform-icon">🎙</span>
+                    <span>Apple Podcasts</span>
+                </a>
+                <a href="#" target="_blank" class="well-platform">
+                    <span class="well-platform-icon">▶</span>
+                    <span>YouTube</span>
+                </a>
+            </div>
+
+            <!-- REPLAY LINE -->
+            <div class="well-replay">
+                <div class="well-replay-eyebrow">Can't Make the Live Call?</div>
+                <div class="well-replay-title">The Daily Prayer Call Replay</div>
+                <p>Miss a morning? Call the replay line anytime and catch up on what God said.</p>
+                <div class="well-replay-details">
+                    <div class="well-replay-detail">
+                        <div class="well-replay-label">Replay Line</div>
+                        <div class="well-replay-number">(667) 770-1559</div>
+                        <div class="well-replay-code">Access Code: 899998#</div>
+                    </div>
+                    <div class="well-replay-detail">
+                        <div class="well-replay-label">Live Call</div>
+                        <div class="well-replay-number">(667) 770-1560</div>
+                        <div class="well-replay-code">Access Code: 899998#</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TEACHINGS LIBRARY -->
+            <div class="well-library">
+                <div class="well-library-header">
+                    <div class="well-library-title">The Pray. Listen. Obey. Podcast with Tracie Bonds</div>
+                    <div class="well-library-sub">New episodes added regularly. Find us on Spotify and Apple Podcasts. Produced by 12 Stones Media.</div>
+                </div>
+
+                <!-- EPISODE CARDS - Replace src with real Spotify embeds when ready -->
+                <div class="well-episodes-grid">
+                    <div class="well-episode-card">
+                        <div class="well-episode-num">01</div>
+                        <div class="well-episode-topic">Hearing God</div>
+                        <div class="well-episode-title">How to Know When God is Speaking to You</div>
+                        <div class="well-episode-player">
+                            <!-- PASTE SPOTIFY EMBED CODE HERE -->
+                            <div class="well-episode-coming">Episode coming soon</div>
+                        </div>
+                    </div>
+                    <div class="well-episode-card">
+                        <div class="well-episode-num">02</div>
+                        <div class="well-episode-topic">Surrender</div>
+                        <div class="well-episode-title">What It Really Means to Surrender to God</div>
+                        <div class="well-episode-player">
+                            <div class="well-episode-coming">Episode coming soon</div>
+                        </div>
+                    </div>
+                    <div class="well-episode-card">
+                        <div class="well-episode-num">03</div>
+                        <div class="well-episode-topic">Faith in Business</div>
+                        <div class="well-episode-title">Obedience as Strategy -- How God Built My Business</div>
+                        <div class="well-episode-player">
+                            <div class="well-episode-coming">Episode coming soon</div>
+                        </div>
+                    </div>
+                    <div class="well-episode-card">
+                        <div class="well-episode-num">04</div>
+                        <div class="well-episode-topic">Belief</div>
+                        <div class="well-episode-title">He Rewards Those Who Seek Him -- Hebrews 11:6</div>
+                        <div class="well-episode-player">
+                            <div class="well-episode-coming">Episode coming soon</div>
+                        </div>
+                    </div>
+                    <div class="well-episode-card">
+                        <div class="well-episode-num">05</div>
+                        <div class="well-episode-topic">Forgiveness</div>
+                        <div class="well-episode-title">Releasing What God Never Asked You to Carry</div>
+                        <div class="well-episode-player">
+                            <div class="well-episode-coming">Episode coming soon</div>
+                        </div>
+                    </div>
+                    <div class="well-episode-card">
+                        <div class="well-episode-num">06</div>
+                        <div class="well-episode-topic">Prayer</div>
+                        <div class="well-episode-title">How to Pray With Expectation and Not Just Hope</div>
+                        <div class="well-episode-player">
+                            <div class="well-episode-coming">Episode coming soon</div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="https://podcasters.spotify.com" target="_blank" class="btn-primary" style="display:inline-block; margin-top:40px; background:var(--seaglass);">Listen on Spotify →</a>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .well-section {
+            background: var(--cream);
+            padding: 100px 80px;
+            border-top: 1px solid var(--sand);
+            border-bottom: 1px solid var(--sand);
+            text-align: center;
+        }
+        .well-inner { max-width: 1000px; margin: 0 auto; }
+        .well-desc {
+            font-size: 0.95rem;
+            color: var(--iron-light);
+            font-weight: 300;
+            line-height: 1.9;
+            margin-bottom: 16px;
+            text-wrap: balance;
+        }
+        .well-platforms {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin: 36px 0;
+            flex-wrap: wrap;
+        }
+        .well-platform {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: white;
+            border: 1px solid var(--sand);
+            padding: 12px 24px;
+            text-decoration: none;
+            color: var(--iron);
+            font-size: 0.78rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            transition: all 0.2s;
+        }
+        .well-platform:hover { border-color: var(--seaglass); color: var(--seaglass); }
+        .well-platform-icon { font-size: 1rem; }
+
+        /* Replay */
+        .well-replay {
+            background: var(--seaglass);
+            padding: 40px 48px;
+            margin: 48px 0;
+            text-align: center;
+        }
+        .well-replay-eyebrow {
+            font-size: 0.62rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.6);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .well-replay-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 10px;
+        }
+        .well-replay p {
+            font-size: 0.88rem;
+            color: rgba(255,255,255,0.75);
+            font-weight: 300;
+            margin-bottom: 28px;
+        }
+        .well-replay-details {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+        .well-replay-label {
+            font-size: 0.6rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.55);
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        .well-replay-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+            line-height: 1.1;
+        }
+        .well-replay-code {
+            font-size: 0.78rem;
+            color: rgba(255,255,255,0.6);
+            font-weight: 300;
+            margin-top: 4px;
+        }
+
+        /* Library */
+        .well-library { margin-top: 60px; text-align: left; }
+        .well-library-header { text-align: center; margin-bottom: 36px; }
+        .well-library-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 8px;
+        }
+        .well-library-sub {
+            font-size: 0.85rem;
+            color: var(--driftwood);
+            font-weight: 300;
+        }
+        .well-episodes-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .well-episode-card {
+            background: white;
+            border: 1px solid var(--sand);
+            padding: 28px 28px 24px;
+            transition: border-color 0.2s;
+        }
+        .well-episode-card:hover { border-color: var(--seaglass); }
+        .well-episode-num {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            font-weight: 300;
+            color: var(--sand);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+        .well-episode-topic {
+            font-size: 0.6rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--fuchsia);
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        .well-episode-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--navy);
+            line-height: 1.4;
+            margin-bottom: 16px;
+        }
+        .well-episode-coming {
+            font-size: 0.75rem;
+            color: var(--driftwood);
+            font-style: italic;
+            font-weight: 300;
+            padding: 12px 0;
+            border-top: 1px solid var(--sand);
+        }
+
+        @media (max-width: 900px) {
+            .well-section { padding: 60px 24px; }
+            .well-episodes-grid { grid-template-columns: 1fr; }
+            .well-replay { padding: 32px 24px; }
+            .well-replay-details { gap: 32px; }
+        }
+    </style>
+
+    <!-- SIGNAL BAR -->
+    <div class="signal-bar">
+        <div class="signal-item">
+            <div class="signal-dot"></div>
+            <span class="signal-text"><strong>The Daily Prayer Call</strong> · Free · Mon–Fri · 9:30am CST</span>
+        </div>
+        <div class="signal-item">
+            <div class="signal-dot"></div>
+            <span class="signal-text"><strong>The Council</strong> · Group Wisdom Calls · $497/month</span>
+        </div>
+        <div class="signal-item">
+            <div class="signal-dot"></div>
+            <span class="signal-text"><strong>The Inner Circle</strong> · Founder's Rate · First 12 Members</span>
+        </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="about">
+        <div class="about-left">
+            <div class="section-eyebrow">My Story</div>
+            <div class="section-title">Built on <em>obedience,</em><br>not just strategy.</div>
+            <p>I am a Christian author, speaker, entrepreneur, and strategist who teaches believers how to hear God's voice and apply His direction to every area of their lives.</p>
+            <div class="about-pull">"My $12 million network marketing career was not built on strategy. It was built on learning to hear and obey God's voice."</div>
+            <p>My journey from $232,000 in IRS debt and a home in foreclosure to building an organization of over 100,000 distributors is not a business story. It is a faith story. And for more than thirteen years I have hosted The Daily Prayer Call, a free weekday gathering where believers come together to seek God and learn to hear His voice.</p>
+            <p>I live in Franklin, Tennessee and I love spending time with my children and grandchildren, traveling, and documenting my own God stories.</p>
+            <a href="https://godiwanttohearYou.com" class="btn-outline" style="margin-top:24px; display:inline-block;">Read Her First Book →</a>
+        </div>
+        <div class="about-right">
+            <div class="about-stat">
+                <div class="about-stat-number">13+</div>
+                <div class="about-stat-label">Years Hosting The Daily Prayer Call</div>
+            </div>
+            <div class="about-stat">
+                <div class="about-stat-number">$12M</div>
+                <div class="about-stat-label">Earned Following God's Voice in Business</div>
+            </div>
+            <div class="about-stat">
+                <div class="about-stat-number">100K+</div>
+                <div class="about-stat-label">Distributors Built Under Her Leadership</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRAYER CALL -->
+    <section class="prayer-call" id="prayer-call">
+        <div class="prayer-call-inner">
+            <div class="section-eyebrow" style="color:rgba(255,255,255,0.6);">Free · Open to Everyone</div>
+            <h2>The Daily Prayer Call</h2>
+            <div class="prayer-call-sub">The Well. Come and be watered.</div>
+            <p>Every Monday through Friday, believers from across the country gather on a free weekday call to seek God together -- to pray, be encouraged, and grow in their faith. This is The Well. Come thirsty. Come as you are. The water is free.</p>
+            <p>A daily replay is also available so you never have to miss a word.</p>
+            <div class="prayer-details-bar">
+                <div class="prayer-detail-item">
+                    <div class="prayer-detail-label">When</div>
+                    <div class="prayer-detail-value">Monday – Friday<br>9:30am CST · 7:30am PST · 8:30am MST · 10:30am EST</div>
+                </div>
+                <div class="prayer-detail-item">
+                    <div class="prayer-detail-label">Cost</div>
+                    <div class="prayer-detail-value">Free · Open to Everyone</div>
+                </div>
+                <div class="prayer-detail-item">
+                    <div class="prayer-detail-label">Replay</div>
+                    <div class="prayer-detail-value">Available Daily</div>
+                </div>
+            </div>
+            <a href="https://godiwanttohearYou.com#prayer-section" class="btn-prayer">Get the Dial-In Number →</a>
+            <p class="prayer-integrity">* We ask for your information to protect the integrity of our prayer community. This is a sacred space and we want to know who is joining us.</p>
+        </div>
+    </section>
+
+    <!-- THE COUNCIL -->
+    <section class="council-section" id="council">
+        <div class="council-inner">
+            <div class="council-header">
+                <div class="section-eyebrow">Wisdom · Counsel · Mentorship</div>
+                <div class="section-title">Come to <em>The Council.</em></div>
+                <p>The queen of Sheba traveled far and paid greatly to sit before Solomon and receive his wisdom. She came with questions. She left transformed. If you are ready to bring your questions and do the work -- there is a seat for you here.</p>
+            </div>
+            <div class="council-grid">
+                <!-- TIER 1 -->
+                <div class="council-card">
+                    <div class="council-tier">Tier One</div>
+                    <div class="council-name">The Council</div>
+                    <div class="council-price">$497<span style="font-size:1.2rem; font-weight:300;">/month</span></div>
+                    <div class="council-price-note">2nd and 4th Wednesdays · 11:30am CST · No set end time</div>
+                    <div class="council-divider"></div>
+                    <ul class="council-features">
+                        <li class="council-feature">Two group wisdom calls per month via Zoom</li>
+                        <li class="council-feature">Submit your questions 48 hours before each call</li>
+                        <li class="council-feature">I pray over every question and seek God's counsel before responding</li>
+                        <li class="council-feature">Calls close with a live Q&A based on the discussion</li>
+                        <li class="council-feature">Topics: business, relationships, family, finance, and fitness</li>
+                        <li class="council-feature">Biblical wise counsel, mentorship, advising, and consulting</li>
+                        <li class="council-feature">Replay provided for every call</li>
+                    </ul>
+                    <a href="mailto:hello@traciebonds.com?subject=The Council - I'm Ready to Apply" class="btn-council">Apply for The Council →</a>
+                </div>
+                <!-- TIER 2 -->
+                <div class="council-card featured">
+                    <div class="council-badge">Founder's Rate · First 12 Only</div>
+                    <div class="council-tier">Tier Two</div>
+                    <div class="council-name">The Inner Circle</div>
+                    <div class="council-price">$32,000<span style="font-size:1.2rem; font-weight:300; color:rgba(255,255,255,0.5);">/year</span></div>
+                    <div class="council-price-note">First 12 members · After that: $48,000/year · Paid within 6 months</div>
+                    <div class="council-divider"></div>
+                    <ul class="council-features">
+                        <li class="council-feature">Everything in The Council, included</li>
+                        <li class="council-feature">Intensive onboarding call -- where you are, where you want to go, what you will be held accountable for</li>
+                        <li class="council-feature">4 individual quarterly check-in calls with Tracie</li>
+                        <li class="council-feature">Direct Voxer access to Tracie</li>
+                        <li class="council-feature">2 in-person intensives per year -- small group, deeply transformative</li>
+                        <li class="council-feature">Access to all teachings and pre-recorded content</li>
+                        <li class="council-feature">Required: Complete GOD, I WANT TO HEAR YOU as your foundation before we begin</li>
+                    </ul>
+                    <a href="mailto:hello@traciebonds.com?subject=The Inner Circle - I'm Interested" class="btn-council-outline">Inquire About The Inner Circle →</a>
+                </div>
+            </div>
+            <div class="council-truth">
+                <p>"God shows up. He works with us. And He will absolutely point out things in you that require surrender. That is not comfortable. But it is the path. And it is glorious."</p>
+                <div class="council-truth-attr">Tracie Bonds · On What Happens Inside The Council</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SPEAKING -->
+    <section class="speaking-section" id="speaking">
+        <div class="speaking-inner">
+            <div class="section-eyebrow">Keynote Speaking</div>
+            <div class="section-title">A message that <em>moves people.</em></div>
+            <p class="speaking-audiences">I speak to <strong>faith communities, women's conferences, corporate audiences, sales organizations,</strong> and <strong>entrepreneurship events</strong> -- bringing the same message in the language of each room.</p>
+            <div class="speaking-topics">
+                <div class="speaking-topic">
+                    <div class="speaking-topic-title">Belief and Expectation</div>
+                    <div class="speaking-topic-sub">How what you truly believe determines what you are willing to pursue -- and what God rewards in those who seek Him. Based on Hebrews 11:6.</div>
+                </div>
+                <div class="speaking-topic">
+                    <div class="speaking-topic-title">The Expectation Advantage</div>
+                    <div class="speaking-topic-sub">The corporate version. How expectation, engagement, and execution create results that conventional strategy cannot explain.</div>
+                </div>
+                <div class="speaking-topic">
+                    <div class="speaking-topic-title">Hearing God in Business</div>
+                    <div class="speaking-topic-sub">How following divine direction built a $12M business and what every faith-driven entrepreneur needs to know about obedience as strategy.</div>
+                </div>
+                <div class="speaking-topic">
+                    <div class="speaking-topic-title">Pray. Listen. Obey.</div>
+                    <div class="speaking-topic-sub">The three-word framework that changed everything. For faith audiences ready to stop going through the motions and start moving with God.</div>
+                </div>
+            </div>
+            <div class="speaking-form">
+                <h3>Inquire About Speaking</h3>
+                <p>Tell us about your event and we will be in touch within 48 hours.</p>
+                <div class="form-row">
+                    <div class="form-field">
+                        <label>First Name</label>
+                        <input type="text" placeholder="Your first name" />
+                    </div>
+                    <div class="form-field">
+                        <label>Last Name</label>
+                        <input type="text" placeholder="Your last name" />
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-field">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="your@email.com" />
+                    </div>
+                    <div class="form-field">
+                        <label>Phone Number</label>
+                        <input type="tel" placeholder="(000) 000-0000" />
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label>Event Name and Organization</label>
+                    <input type="text" placeholder="Name of your event or organization" />
+                </div>
+                <div class="form-row">
+                    <div class="form-field">
+                        <label>Event Date</label>
+                        <input type="text" placeholder="Approximate date or date range" />
+                    </div>
+                    <div class="form-field">
+                        <label>Audience Type</label>
+                        <select>
+                            <option value="">Select your audience</option>
+                            <option>Faith Community / Church</option>
+                            <option>Women's Conference</option>
+                            <option>Corporate / Business</option>
+                            <option>Sales Organization</option>
+                            <option>Entrepreneurship Event</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label>Tell us about your event</label>
+                    <textarea placeholder="Share the vision for your event, expected attendance, and what you are hoping Tracie's message will do for your audience."></textarea>
+                </div>
+                <button class="btn-submit" onclick="submitSpeakingForm()">Submit Speaking Inquiry →</button>
+                <div id="speaking-success" style="display:none; margin-top:16px; font-size:0.85rem; color:var(--seaglass-light); font-weight:400;">Thank you! We will be in touch within 48 hours.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOKS CATALOG -->
+    <section class="books-section">
+        <div class="books-inner">
+            <div class="books-header">
+                <div class="section-eyebrow">12 Stones Press</div>
+                <div class="section-title">More <em>titles coming.</em></div>
+            </div>
+            <div class="catalog-series-label">The Radical Faith Series</div>
+            <div class="catalog-grid">
+                <div class="catalog-book active">
+                    <div class="catalog-book-num">01</div>
+                    <div class="catalog-book-title">God, I Want to Hear You</div>
+                    <div class="catalog-book-sub">9 Essential Practices for Hearing His Voice</div>
+                    <div class="catalog-book-status available">Available Now</div>
+                </div>
+                <div class="catalog-book">
+                    <div class="catalog-book-num">02</div>
+                    <div class="catalog-book-title">Battle Cry</div>
+                    <div class="catalog-book-sub">Psalm-Writing as Spiritual Warfare</div>
+                    <div class="catalog-book-status">Coming Soon</div>
+                </div>
+                <div class="catalog-book">
+                    <div class="catalog-book-num">03</div>
+                    <div class="catalog-book-title">Altar</div>
+                    <div class="catalog-book-sub">Complete Surrender</div>
+                    <div class="catalog-book-status">Coming Soon</div>
+                </div>
+                <div class="catalog-book">
+                    <div class="catalog-book-num">04</div>
+                    <div class="catalog-book-title">Prophecy</div>
+                    <div class="catalog-book-sub">Prophetic Ministry</div>
+                    <div class="catalog-book-status">Coming Soon</div>
+                </div>
+            </div>
+            <div class="catalog-series-label">The Radical Faith in Business Series</div>
+            <div class="catalog-grid">
+                <div class="catalog-book">
+                    <div class="catalog-book-num">01</div>
+                    <div class="catalog-book-title">Pray. Listen. Obey.</div>
+                    <div class="catalog-book-sub">How God Built My Eight-Figure Network Marketing Business</div>
+                    <div class="catalog-book-status">Coming Soon</div>
+                </div>
+                <div class="catalog-book">
+                    <div class="catalog-book-num">02</div>
+                    <div class="catalog-book-title">The Business of Network Marketing</div>
+                    <div class="catalog-book-sub">Faith-Based Business Principles</div>
+                    <div class="catalog-book-status">Coming Soon</div>
+                </div>
+                <div class="catalog-book">
+                    <div class="catalog-book-num">03</div>
+                    <div class="catalog-book-title">The Case for Network Marketing</div>
+                    <div class="catalog-book-sub">Answering the Lies That Keep You From Your Calling</div>
+                    <div class="catalog-book-status">Coming Soon</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-tagline">"Speak, Lord,<br>Your servant is listening."</div>
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="footer-brand-name">Tracie Bonds</div>
+                <span class="footer-brand-tag">Pray. Listen. Obey.</span>
+                <p>No matter your situation or circumstance, God has the answer you need. Come loved. Come known. Come draw closer to Him.</p>
+            </div>
+            <div class="footer-col">
+                <h4>The Book</h4>
+                <a href="https://amzn.to/3Q6MLA8">Pre-Order on Kindle — $2.99</a>
+                <a href="https://godiwanttohearYou.com">GodIWantToHearYou.com</a>
+                <a href="#" style="color:var(--driftwood); pointer-events:none;">The Workbook — Coming Soon</a>
+                <a href="#" style="color:var(--driftwood); pointer-events:none;">The Journal — Coming Soon</a>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <a href="#prayer-call">The Daily Prayer Call</a>
+                <a href="#council">The Council</a>
+                <a href="#council">The Inner Circle</a>
+                <a href="#speaking">Speaking</a>
+            </div>
+            <div class="footer-col">
+                <h4>Find Tracie</h4>
+                <a href="https://www.instagram.com/traciebonds" target="_blank">Instagram @traciebonds</a>
+                <a href="https://www.facebook.com/traciebonds" target="_blank">Facebook @traciebonds</a>
+                <a href="mailto:hello@traciebonds.com">hello@traciebonds.com</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Tracie Bonds · 12 Stones Press · All Rights Reserved.</p>
+            <p><a href="#" style="color:rgba(255,255,255,0.25); text-decoration:none;">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+    <script>
+        function submitSpeakingForm() {
+            const btn = document.querySelector('.btn-submit');
+            btn.textContent = 'Sending...';
+            btn.disabled = true;
+            setTimeout(() => {
+                document.getElementById('speaking-success').style.display = 'block';
+                btn.textContent = 'Inquiry Sent';
+            }, 800);
+        }
+    </script>
+
+</body>
+</html>
